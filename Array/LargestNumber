@@ -1,0 +1,12 @@
+def largest_number(nums):
+    if not nums:
+        return None
+    max_val = nums[0]
+    for num in nums[1:]:
+        if num > max_val:
+            max_val = num
+    return max_val
+
+if __name__ == "__main__":
+    numbers = [3, 5, 2, 9, 1]
+    print("Largest number:", largest_number(numbers))
