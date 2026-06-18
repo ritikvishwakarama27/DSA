@@ -1,0 +1,17 @@
+import java.util.Arrays;
+
+public class FifthLargest {
+    public static void main(String[] args) {
+        int[] arr = {10, 5, 8, 12, 3, 7, 20, 15, 18, 1};
+        System.out.println("Fifth largest element: " + findFifthLargest(arr));
+    }
+    
+    public static int findFifthLargest(int[] arr) {
+        if (arr.length < 5) {
+            throw new IllegalArgumentException("Array must have at least 5 elements");
+        }
+        
+        Arrays.sort(arr);
+        return arr[arr.length - 5];
+    }
+}
